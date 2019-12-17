@@ -8,14 +8,18 @@
   }
 
   /*
-  Attribute selectors work like this:
-  [alt="Logo"] {}
+  Attribute selectors can be used to select elements with a given attribute value, like this:
+  [alt="Logo"] {
+      // css here
+  }
+  
+  Select all elements with class name starting with "col-".
+  Similarly one can use [class$="col-"] { } to select elements with class names ending with "col-".
   */
   [class^="col-"] {
-    // Select all elements with class name starting with "col-"
-    // Similarly one can do [class$="col-"] { }
     background-color: red;
     float: left;
+    padding: 1rem;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
     }
@@ -49,10 +53,5 @@
     width: calc(
       (100% - 2 * #{$gutter-horizontal}) / 3 * 2 + #{$gutter-horizontal}
     );
-    background-color: red;
-    float: left;
-    &:not(:last-child) {
-      margin-right: $gutter-horizontal;
-    }
   }
 }
