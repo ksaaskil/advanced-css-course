@@ -1,7 +1,6 @@
 .row {
   @include clearfix;
   max-width: $grid-width;
-  background-color: #eee;
   margin: 0 auto;
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
@@ -17,7 +16,6 @@
   Similarly one can use [class$="col-"] { } to select elements with class names ending with "col-".
   */
   [class^="col-"] {
-    background-color: red;
     float: left;
     padding: 1rem;
     &:not(:last-child) {
